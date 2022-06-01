@@ -3,13 +3,13 @@ import List from '../Components/List';
 import ToDoInput from '../Components/ToDoInput'
 
 const Todolist = ( props ) => { 
-    
+    const [list, setList] = useState([])
 
-    const list = []
 
     const addNewObject = (form) => { 
         form.preventDefault();
-        list.push(form.nativeEvent.target[0].value);
+        setList([...list,  form.nativeEvent.target[0].value])
+        // list.push(form.nativeEvent.target[0].value);
         console.log(list);
     }
     console.log(list);
